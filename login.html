@@ -1,0 +1,52 @@
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDYnJkK58rKpMgnB_KnuW6HpGg_acGlCHo",
+    authDomain: "fir-authwev.firebaseapp.com",
+    databaseURL: "https://fir-authwev.firebaseio.com",
+    projectId: "fir-authwev",
+    storageBucket: "fir-authwev.appspot.com",
+    messagingSenderId: "895936895112"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'LoggedIn.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: '<your-tos-url>'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<div></div>
+<body>
+<h1 align="center">auth test</h1>
+		
+	
+	<div id="firebaseui-auth-container"></div>
+	
